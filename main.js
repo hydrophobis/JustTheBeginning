@@ -1039,6 +1039,25 @@ var Game={};
 		NOTE: modding API is susceptible to change and may not always function super-well
 	*/
 	Game.mods={};
+
+	// JustTheBeginning
+	Game.mods['Just The Beginning'] = {
+		init: function() {
+			// Your mod logic goes here
+			console.log('Mod initialized');
+			
+			// Example: Adding a new achievement
+			new Game.Achievement('Mod Achievement', 'This is a custom achievement.', [0, 0]);
+		},
+		save: function() {
+			// Save data for your mod (if necessary)
+			return '';
+		},
+		load: function(str) {
+			// Load mod data (if necessary)
+		}
+	};
+	
 	Game.sortedMods=[];
 	Game.brokenMods=[];
 	Game.modSaveData={};
@@ -1187,6 +1206,9 @@ var Game={};
 	}
 	
 	Game.LoadMod=LoadScript;//loads the mod at the given URL
+
+	// Now load the mod
+	Game.registerMod('Just The Beginning', Game.mods['Just The Beginning']);
 	
 	if (false)
 	{
@@ -1226,8 +1248,6 @@ var Game={};
 	//upgrades and achievements can use other pictures than icons.png; declare their icon with [posX,posY,'http://example.com/myIcons.png']
 	//check out the "UNLOCKING STUFF" section to see how unlocking achievs and upgrades is done
 })();
-
-Game.LoadMod('jtb.js')
 
 Game.version=VERSION;
 Game.loadedFromVersion=VERSION;
