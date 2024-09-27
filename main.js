@@ -1208,7 +1208,7 @@ var Game={};
 	Game.LoadMod=LoadScript;//loads the mod at the given URL
 
 	// Now load the mod
-	Game.registerMod('Just The Beginning', Game.mods['Just The Beginning']);
+	Game.LoadMod('jtb.js');
 	
 	if (false)
 	{
