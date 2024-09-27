@@ -7402,7 +7402,10 @@ Game.Launch=function()
 			if (this.amount>=400) Game.Unlock('Octillion fingers');
 			
 			if (this.amount>=1) Game.Win('Click');if (this.amount>=2) Game.Win('Double-click');if (this.amount>=50) Game.Win('Mouse wheel');if (this.amount>=100) Game.Win('Of Mice and Men');if (this.amount>=200) Game.Win('The Digital');if (this.amount>=300) Game.Win('Extreme polydactyly');if (this.amount>=400) Game.Win('Dr. T');if (this.amount>=500) Game.Win('Thumbs, phalanges, metacarpals');if (this.amount>=600) Game.Win('With her finger and her thumb');
-			if (this.amount>=1) Game.Win('Click2');if (this.amount>=2) Game.Win('Double-click');if (this.amount>=50) Game.Win('Mouse wheel');if (this.amount>=100) Game.Win('Of Mice and Men');if (this.amount>=200) Game.Win('The Digital');if (this.amount>=300) Game.Win('Extreme polydactyly');if (this.amount>=400) Game.Win('Dr. T');if (this.amount>=500) Game.Win('Thumbs, phalanges, metacarpals');if (this.amount>=600) Game.Win('With her finger and her thumb');
+
+			if (this.amount >= 5) {
+				Game.Win('Click Master');
+			}
 		});
 		
 		Game.SpecialGrandmaUnlock=15;
@@ -10107,7 +10110,7 @@ Game.Launch=function()
 		
 		order=1050;
 		new Game.Achievement('Click','Have <b>1</b> cursor.',[0,0]);
-		new Game.Achievement('Click2','Have <b>1</b> cursor.',[0,0]);
+		new Game.Achievement('Click Master','Have <b>5</b> cursors.',[0,0]);
 		new Game.Achievement('Double-click','Have <b>2</b> cursors.',[0,6]);
 		new Game.Achievement('Mouse wheel','Have <b>50</b> cursors.',[1,6]);
 		new Game.Achievement('Of Mice and Men','Have <b>100</b> cursors.',[0,1]);
