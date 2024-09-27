@@ -10107,6 +10107,7 @@ Game.Launch=function()
 		
 		order=1050;
 		new Game.Achievement('Click','Have <b>1</b> cursor.',[0,0]);
+		new Game.Achievement('Click2','Have <b>1</b> cursor.',[0,0]);
 		new Game.Achievement('Double-click','Have <b>2</b> cursors.',[0,6]);
 		new Game.Achievement('Mouse wheel','Have <b>50</b> cursors.',[1,6]);
 		new Game.Achievement('Of Mice and Men','Have <b>100</b> cursors.',[0,1]);
