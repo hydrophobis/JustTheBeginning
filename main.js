@@ -1,4 +1,4 @@
-/*
+﻿/*
 All this code is copyright Orteil, 2013-2023.
 	-with some help, advice and fixes by Nicholas Laux, Debugbro, Opti, the folks at Playsaurus, and lots of people on reddit, Discord, and the DashNet forums
 	-also includes a bunch of snippets found on stackoverflow.com and others
@@ -1039,25 +1039,6 @@ var Game={};
 		NOTE: modding API is susceptible to change and may not always function super-well
 	*/
 	Game.mods={};
-
-	// JustTheBeginning
-	Game.mods['Just The Beginning'] = {
-		init: function() {
-			// Your mod logic goes here
-			console.log('Mod initialized');
-			
-			// Example: Adding a new achievement
-			new Game.Achievement('Mod Achievement', 'This is a custom achievement.', [0, 0]);
-		},
-		save: function() {
-			// Save data for your mod (if necessary)
-			return '';
-		},
-		load: function(str) {
-			// Load mod data (if necessary)
-		}
-	};
-	
 	Game.sortedMods=[];
 	Game.brokenMods=[];
 	Game.modSaveData={};
@@ -1207,7 +1188,6 @@ var Game={};
 	
 	Game.LoadMod=LoadScript;//loads the mod at the given URL
 
-	// Now load the mod
 	Game.LoadMod('jtb.js');
 	
 	if (false)
@@ -2282,7 +2262,7 @@ Game.Launch=function()
 			Game.bakeryNameL.textContent=name;
 			name=Game.bakeryName.toLowerCase();
 			if (name=='orteil') Game.Win('God complex');
-			if (!App && name.indexOf('saysopensesame',name.length-('saysopensesame').length)>0 && !Game.sesame) {Game.Notify("I patched that","no OpenSesame for you :)"+'</a>',[32,0]);} //Game.OpenSesame();
+			if (!App && name.indexOf('saysopensesame',name.length-('saysopensesame').length)>0 && !Game.sesame) Game.OpenSesame();
 			Game.recalculateGains=1;
 		}
 		Game.bakeryNamePrompt=function()
@@ -2516,7 +2496,7 @@ Game.Launch=function()
 		
 		Game.GrabData=function()
 		{
-			if (!App) ajax('grab.php',Game.GrabDataResponse);
+			if (!App) ajax('grab.txt',Game.GrabDataResponse);
 			else App.grabData(function(res){
 				Game.heralds=res?(res.playersN||1):1;
 				Game.heralds=Math.max(0,Math.min(100,Math.ceil(Game.heralds/100*100)/100));
