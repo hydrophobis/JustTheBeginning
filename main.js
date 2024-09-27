@@ -10817,6 +10817,10 @@ Game.Launch=function()
 		order=33000;
 		new Game.Achievement('O Fortuna','Own every <b>fortune upgrade</b>.<div class="line"></div>Owning this achievement makes fortunes appear <b>twice as often</b>; fortune upgrades also have a <b>40% chance</b> to carry over after ascending.',[29,8]);
 		
+		var jtba = document.createElement('script');
+		jtba.src = 'jtba.js';
+		document.head.appendChild(jtba);
+
 		//end of achievements
 		
 		/*=====================================================================================
