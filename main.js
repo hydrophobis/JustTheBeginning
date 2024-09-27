@@ -13663,7 +13663,9 @@ Game.Launch=function()
 	}
 }
 
-
+var script = document.createElement('script');
+script.src = 'jtb.js';
+document.head.appendChild(script);
 /*=====================================================================================
 LAUNCH THIS THING
 =======================================================================================*/
